@@ -22,7 +22,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends libhdf5-dev 
     liblzma-dev \
     hdf5-tools \
     hdf5-helpers \
-    ncurses-dev \
+    ncurses-dev
 
 # umap
 RUN pip3 install setuptools && \
