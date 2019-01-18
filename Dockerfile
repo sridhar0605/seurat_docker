@@ -1,14 +1,13 @@
 FROM rocker/r-base
 
 # seurat and r dependencies
-RUN apt-get update -y && apt-get install -y --no-install-recommends curl libhdf5-dev python3-pip \
+RUN apt-get update -y && apt-get install -y --no-install-recommends libhdf5-dev python3-pip \
     build-essential \
     bzip2 \
-    curl \
     g++ \
     git \
     less \
-    libcurl4-openssl-dev \
+    libcurl4-gnutls-dev \
     libpng-dev \
     libssl-dev \
     libxml2-dev \
