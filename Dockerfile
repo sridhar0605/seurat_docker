@@ -111,7 +111,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
     ln -s /usr/local/lib/R/site-library/littler/bin/r /usr/local/bin/r
 
    ## install r packages, bioconductor, etc ##
-   ADD requirements/ /tmp/
+   ADD install.r /tmp/
    RUN R -f /tmp/install.r 
    # RUN R -e 'install.packages(c("devtools"))'
    # RUN R -e 'devtools::install_github(repo = "satijalab/seurat", ref = "release/3.0")'
