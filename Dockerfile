@@ -1,3 +1,7 @@
+# lift from cmiller R docker repo
+# https://github.com/chrisamiller/docker-R
+# add seurat dev repo
+
 FROM ubuntu:xenial
 
 ARG R_VERSION
