@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
     gfortran \
     gsfonts \
     libbz2-1.0 \
-    curl libssl-dev libcurl4-openssl-dev libxml2-dev \
+    curl libssl-dev libcurl4-openssl-dev libnss-sss libxml2-dev \
     libcurl3 \
     libicu55 \
     libjpeg-turbo8 \
