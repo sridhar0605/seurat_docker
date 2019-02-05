@@ -27,9 +27,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
     gfortran \
     gsfonts \
     libbz2-1.0 \
-    curl libssl-dev libcurl4-openssl-dev libnss-sss libxml2-dev \
-    python3 python3-dev \
-    python3-pip python3-venv python3-wheel python3-setuptools \
+    curl \
+    libssl-dev \
+    libcurl4-openssl-dev \
+    libnss-sss libxml2-dev \
+    python3-dev \
+    python3-pip \
     libcurl3 \
     libicu55 \
     libjpeg-turbo8 \
