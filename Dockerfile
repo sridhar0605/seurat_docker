@@ -1,6 +1,8 @@
 # lift from cmiller R docker repo
 # https://github.com/chrisamiller/docker-R
 # add seurat dev repo
+# add python stack 
+# add umap 
 
 FROM ubuntu:xenial
 
@@ -26,6 +28,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
     gsfonts \
     libbz2-1.0 \
     curl libssl-dev libcurl4-openssl-dev libnss-sss libxml2-dev \
+    python3 python3-dev \
+    python3-pip python3-venv python3-wheel python3-setuptools \
     libcurl3 \
     libicu55 \
     libjpeg-turbo8 \
@@ -113,7 +117,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
     ln -s /usr/local/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r && \
     ln -s /usr/local/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r && \
     ln -s /usr/local/lib/R/site-library/littler/bin/r /usr/local/bin/r
-
+    
    ## install r packages, bioconductor, etc ##
    ADD install.r /tmp/
    RUN R -f /tmp/install.r 
@@ -124,6 +128,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
    RUN Rscript -e "install.packages('devtools')"
    RUN Rscript -e "devtools::install_github(repo='satijalab/seurat', ref = 'release/${SEURAT_VER}')" 
    RUN Rscript -e "devtools::install_github(repo='diazlab/CONICS/CONICSmat', dep = FALSE)"
+   
+   # add umap
+   RUN pip3 install setuptools && \
+       pip3 install umap-learn
+   
    ## Clean up
    RUN cd / && \
    rm -rf /tmp/* && \
