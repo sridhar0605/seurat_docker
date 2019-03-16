@@ -131,6 +131,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
    RUN Rscript -e "install.packages('devtools')"
    RUN Rscript -e "devtools::install_github(repo='satijalab/seurat', ref = 'release/${SEURAT_VER}')" 
    RUN Rscript -e "devtools::install_github(repo='diazlab/CONICS/CONICSmat', dep = FALSE)"
+   RUN Rscript -e "devtools::install_github(repo = 'ChristophH/sctransform')"
    
    # add umap
    RUN pip3 install setuptools && \
