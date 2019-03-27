@@ -135,7 +135,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
    
    # add umap
    RUN pip3 install setuptools && \
-       pip3 install umap-learn
+       pip3 install umap-learn && \
+       pip3 install numpy
    
    ## Clean up
    RUN cd / && \
