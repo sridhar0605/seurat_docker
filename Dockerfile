@@ -8,7 +8,7 @@ FROM ubuntu:xenial
 
 ARG R_VERSION
 ARG BUILD_DATE
-ARG SEURAT_VER=3.0
+ARG SEURAT_VERSION=3.0
 ENV BUILD_DATE 2019-01-18
 ENV R_VERSION=${R_VERSION:-3.5.1}
 RUN apt-get update && apt-get install -y --no-install-recommends locales && \
@@ -129,7 +129,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
    #RUN R -f "install.packages(c("devtools"))"
    
    RUN Rscript -e "install.packages('devtools')"
-   RUN Rscript -e "devtools::install_github(repo='satijalab/seurat', ref = 'release/${SEURAT_VER}')" 
+   RUN Rscript -e "devtools::install_github(repo='satijalab/seurat', ref = 'release/${SEURAT_VERSION}')" 
    RUN Rscript -e "devtools::install_github(repo='diazlab/CONICS/CONICSmat', dep = FALSE)"
    
    
