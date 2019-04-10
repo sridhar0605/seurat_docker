@@ -58,6 +58,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
     liblzma-dev \
     libx11-dev \
     libxt-dev \
+    libhdf5-dev \
     perl \
     tcl8.5-dev \
     tk8.5-dev \
