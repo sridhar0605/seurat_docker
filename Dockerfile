@@ -8,7 +8,7 @@ FROM ubuntu:xenial
 
 ARG R_VERSION
 ARG BUILD_DATE
-ARG SEURAT_VERSION=3.0
+ARG SEURAT_VERSION=3.1.0
 ENV BUILD_DATE 2019-01-18
 ENV R_VERSION=${R_VERSION:-3.5.1}
 RUN apt-get update && apt-get install -y --no-install-recommends locales && \
