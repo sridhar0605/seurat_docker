@@ -130,7 +130,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
    #RUN R -f "install.packages(c("devtools"))"
    
    RUN Rscript -e "install.packages('devtools')"
-   RUN Rscript -e "devtools::install_github(repo='satijalab/seurat', ref = 'release/${SEURAT_VERSION}')" 
+   # RUN Rscript -e "devtools::install_github(repo='satijalab/seurat', ref = 'release/${SEURAT_VERSION}')" 
    RUN Rscript -e "devtools::install_github(repo='diazlab/CONICS/CONICSmat', dep = FALSE)"
    
    
