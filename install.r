@@ -17,7 +17,7 @@ install.packages(c("ggplot2",
 "mgcv", 
 "abind",
 "igraph",
-"h5",
+"h5", "Seurat",
 "cluster",
 "data.table"),
 repo=paste0("https://mran.microsoft.com/snapshot/",format(Sys.Date(), format="%Y-%m-%d")))
