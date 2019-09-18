@@ -24,8 +24,7 @@ repo=paste0("https://mran.microsoft.com/snapshot/",format(Sys.Date(), format="%Y
 source("https://bioconductor.org/biocLite.R")
 biocLite(c("scran",
 "biomaRt",
-"monocle"
-,"RGSEA",
+"RGSEA",
 "fgsea",
 "GenVisR",
 "scde",
