@@ -33,4 +33,10 @@ biocLite(c("scran",
 "org.Mm.eg.db",
 "org.Hs.eg.db",
 "EGSEA",
-"GenomicRanges"))
+"GenomicRanges",
+"BiocGenerics", 
+"DelayedArray", 
+"DelayedMatrixStats",
+"limma", "S4Vectors", 
+"SingleCellExperiment",
+"SummarizedExperiment", "batchelor"))
