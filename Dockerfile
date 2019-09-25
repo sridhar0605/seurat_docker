@@ -131,7 +131,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends locales && \
    
    RUN Rscript -e "install.packages('devtools')"
    # RUN Rscript -e "devtools::install_github(repo='satijalab/seurat', ref = 'release/${SEURAT_VERSION}')" 
-   RUN Rscript -e "devtools::install_github('cole-trapnell-lab/monocle3', dep=TRUE)"
+   RUN Rscript -e "devtools::install_github('cole-trapnell-lab/leidenbase', dep=FALSE)"
+   RUN Rscript -e "devtools::install_github('cole-trapnell-lab/monocle3', dep=FALSE)"
    RUN Rscript -e "devtools::install_github(repo='diazlab/CONICS/CONICSmat', dep = FALSE)"
    
    
